@@ -267,8 +267,8 @@ tour.addStep({
     id: 'example-step-2',
     text: 'Each arc indicates a company and the arc length represents the amount of money the company receive.',
     attachTo: {
-        element: '#pills-funding > div > svg > g > g.chord-group > g:nth-child(1) > path',
-        on: 'left'
+        element: '#pills-funding > div > svg > g > g.chord-group > g:nth-child(4) > path',
+        on: 'top'
     },
     classes: 'example-step-extra-class',
     buttons: [{
