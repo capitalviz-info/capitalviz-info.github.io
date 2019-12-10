@@ -281,8 +281,8 @@ tour.addStep({
     id: 'example-step-3',
     text: 'The colored (not black) ribbons coming from each dot indicate a funding stage from the investors to the company',
     attachTo: {
-        element: '#pills-funding > div > svg > g > g:nth-child(1) > g:nth-child(1) > path',
-        on: 'left'
+        element: '#pills-funding > div > svg > g > g:nth-child(1) > g:nth-child(2) > path',
+        on: 'right'
     },
     classes: 'example-step-extra-class',
     buttons: [{
