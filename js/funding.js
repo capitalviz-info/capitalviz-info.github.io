@@ -182,6 +182,9 @@ function deleteInvestors(investors) {
 
 }
 
+function zoomed() {
+    FundingState.state.svg.select("g").attr("transform", d3.event.transform);
+}
 
 d3.csv('./data/investments.csv').then(function (dataset) {
 
@@ -196,9 +199,7 @@ d3.csv('./data/investments.csv').then(function (dataset) {
     //     .scaleExtent([1, 8])
     //     .on("zoom", zoomed)).call(d3.zoom().transform, transform);
 
-    // function zoomed() {
-    //     FundingState.state.svg.select("g").attr("transform", d3.event.transform);
-    // }
+    
 
     const j = Object.keys(FundingState.state.data.allInvestors)
     allinvestors = new Set(j)
