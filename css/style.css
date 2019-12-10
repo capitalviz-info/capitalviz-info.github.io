@@ -297,3 +297,7 @@ li {
 .filter-picker {
     padding-left: 1rem;
 }
+
+.svgText {
+    pointer-events: none;
+}

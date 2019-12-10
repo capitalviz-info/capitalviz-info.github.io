@@ -436,6 +436,7 @@ class ScatterPlotChart {
                     .attr("y", -10)
                     .attr("text-anchor", "middle")
                     .attr("opacity", 0)
+                    .attr("class", "svgText")
                     .text((d) => {
                         return d.key
                     })
@@ -447,6 +448,7 @@ class ScatterPlotChart {
                         const j = d3.select(this.parentNode).attr("transform")
                         d3.select(this.parentNode).attr("transform", `${j} scale(1.3, 1.3)`)
                         d3.select(this.parentNode).select("text").attr("opacity", 1)
+
                     }).on("mouseout", function () {
                         const j = d3.select(this.parentNode).attr("transform").indexOf("scale")
                         d3.select(this.parentNode).attr("transform", d3.select(this.parentNode).attr("transform").substr(0, j - 1))
@@ -459,6 +461,7 @@ class ScatterPlotChart {
                         ScatterplotState.state.selectedElement = this.parentNode
                         ScatterplotState.state.greyOutAllElement()
                         d3.select(this.parentNode).select(".scatternode").attr("opacity", 1)
+
 
                         //Make treemap
                         treemap.generateChart(d.key, ScatterplotState.state.year)
