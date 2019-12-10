@@ -19,7 +19,7 @@ class DetailsData {
     }
 
     getRevenue(displayName) {
-        const b = this.incomestatements.filter(v => v.displayName === displayName)
+        const b = this.incomestatements.filter(v => v.displayName === displayName && +v.year === ScatterplotState.state.year)
         if (b.length === 0) return undefined
         const len = b.length
         return +b[len - 1].revenueUSD
@@ -84,6 +84,10 @@ class DetailsState {
         if (!DetailsState.state.data.ready()) return console.log("not ready")
         DetailsState.state.current = displayName
         DetailsState.state.updateDetails(displayName)
+    }
+
+    static update() {
+        DetailsState.state.updateDetails(DetailsState.state.current)
     }
     
     static reset() {

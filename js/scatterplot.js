@@ -323,6 +323,7 @@ var sliderStep = d3
         ScatterplotState.state.axisLGenerator(ScatterplotState.state.chartScale.y)
         ScatterplotState.state.axisBGenerator(ScatterplotState.state.chartScale.x)
         ScatterPlotChart.updateCharts()
+        DetailsState.update()
 
         //Remake treemap to make based on new year value
         treemap.generateChart(document.getElementById("companyName").textContent, ScatterplotState.state.year)
